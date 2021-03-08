@@ -1,0 +1,410 @@
+body{
+   margin:0;
+
+}
+canvas {
+    width:100%;
+    height:100%;
+    display:inline-block;vertical-align:baseline;
+    position:absolute;
+    z-index:-1;
+    }
+p {
+     font-size: 100px;
+    font-family: helvetica;
+    color: gray;
+    position: absolute;
+    left:25%;
+    top: 5%;
+    margin: 0 auto;
+}
+
+p::after{
+  content: 'Welcome to the Universe!';
+  color: transparent;
+  position: absolute;
+    left:0;
+    top: 0;
+    -webkit-clip-path:ellipse(100px 100px at 0% 50%);
+    clip-path:ellipse(100px 100px at 0% 50%);
+    animation: spotlight 7s infinite;
+    background-image: url(https://images.unsplash.com/photo-1614850523425-eec693b15af5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80);
+    background-size: 100%;
+  background-position: center center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+
+
+
+  }
+  @keyframes spotlight{
+    0%{-webkit-clip-path:ellipse(100px 100px at 0% 50%);
+    clip-path:ellipse(100px 100px at 0% 50%);
+
+    }
+    50%{-webkit-clip-path:ellipse(100px 100px at 100% 50%);
+    clip-path:ellipse(100px 100px at 100% 50%);
+
+    }
+
+    100%{
+
+    }
+  }
+
+
+button{
+                position: absolute;
+                top: 80%;
+                left: 48%;
+                height: 40px;
+                width: 100px;
+              
+                text-align: center;
+                line-height: 20px;
+                color: #fff;
+                font-size: 24px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-family: sans-serif;
+               
+                background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4)
+
+                }
+
+            .sunsystem {
+                position: relative;
+                width: 100vw;
+                height: 100vh;
+                margin: 0 auto;
+              
+                transition: 1s linear;
+            }
+
+            .sun{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                height: calc(70px + 1px);
+                width: calc(70px + 1px);
+                margin-top: calc(-70px / 2);
+                margin-left: calc(-70px / 2);
+                background: radial-gradient(
+                        goldenrod 0%,
+                        goldenrod 64%,
+                        transparent 76%,
+                        transparent 100%
+                );
+                box-shadow: 0 0 36px #da9800;
+                border-radius: 50%;
+            }
+
+           
+            [class*="-Orbit"] {
+                position: absolute;
+                border: 1px dashed gray;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+            }
+
+            .Mercury-Orbit{
+                height: calc(90px - 1px);
+                width: calc(90px - 1px);
+                margin-top: -45px;
+                margin-left: -45px;
+            }
+
+            .Venus-Orbit{
+                height: calc(120px - 1px);
+                width: calc(120px - 1px);
+                margin-top: -60px;
+                margin-left: -60px;
+            }
+
+            .Earth-Orbit {
+                height: calc(180px - 1px);
+                width: calc(180px - 1px);
+                margin-top: -90px;
+                margin-left: -90px;
+            }
+
+            .Mars-Orbit {
+                height: calc(240px - 1px);
+                width: calc(240px - 1px);
+                margin-top: -120px;
+                margin-left: -120px;
+            }
+
+            .Jupiter-Orbit {
+                height: calc(380px - 1px);
+                width: calc(380px - 1px);
+                margin-top: -190px;
+                margin-left: -190px;
+            }
+
+            .Saturn-Orbit {
+                height: calc(480px - 1px);
+                width: calc(480px - 1px);
+                margin-top: -240px;
+                margin-left: -240px;
+            }
+
+            .Uranus-Orbit {
+                height: calc(580px - 1px);
+                width: calc(580px - 1px);
+                margin-top: -290px;
+                margin-left: -290px;
+            }
+
+            .Neptune-Orbit {
+                height: calc(680px - 1px);
+                width: calc(680px - 1px);
+                margin-top: -340px;
+                margin-left: -340px;
+            }
+
+        
+
+            
+            [class*="-System"] {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transition: 1s;
+            }
+
+            .Mercury-System {
+                height: 4px;
+                width: 4px;
+                margin-top: calc(-4px / 2 + 1px / 2);
+                margin-left: calc(-90px / 2 - 4px / 2 + 1px / 2);
+                transform-origin: calc(90px / 2 + 4px / 2) calc(4px / 2);
+                animation: rotate 4.4s infinite linear;
+            }
+
+            .Venus-System {
+                height: 8px;
+                width: 8px;
+                margin-top: calc(-8px / 2);
+                margin-left: calc(-120px / 2 - 8px / 2);
+                transform-origin: calc(120px / 2 + 8px / 2) calc(8px / 2);
+                animation: rotate 11.235s infinite linear;
+            }
+
+            .Earth-System {
+                height: 16px;
+                width: 16px;
+                margin-top: calc(-16px / 2);
+                margin-left: calc(-180px / 2 - 16px / 2);
+                transform-origin: calc(180px / 2 + 16px / 2) calc(16px / 2);
+                animation: rotate 18.262s infinite linear;
+            }
+
+            .Mars-System {
+                height: 16px;
+                width: 16px;
+                margin-top: calc(-16px / 2);
+                margin-left: calc(-240px / 2 - 16px / 2);
+                transform-origin: calc(240px / 2 + 16px / 2) calc(16px / 2);
+                animation: rotate 34.349s infinite linear;
+            }
+
+            .Jupiter-System {
+                height: 40px;
+                width: 40px;
+                margin-top: calc(-40px / 2);
+                margin-left: calc(-380px / 2 - 40px / 2);
+                transform-origin: calc(380px / 2 + 40px / 2) calc(40px / 2);
+                animation: rotate 216.6215s infinite linear;
+            }
+
+            .Satur-System{
+                height: 24px;
+                width: 24px;
+                margin-top: calc(-24px / 2);
+                margin-left: calc(-480px / 2 - 24px / 2);
+                transform-origin: calc(480px / 2 + 24px / 2) calc(24px / 2);
+                animation: rotate 541.616s infinite linear;
+            }
+
+            .Uranus-System {
+                height: 20px;
+                width: 20px;
+                margin-top: calc(-20px / 2);
+                margin-left: calc(-580px / 2 - 20px / 2);
+                transform-origin: calc(580px / 2 + 20px / 2) calc(20px / 2);
+                animation: rotate 1539.95s infinite linear;
+            }
+
+            .Neptune-System {
+                height: 18px;
+                width: 18px;
+                margin-top: calc(-18px / 2);
+                margin-left: calc(-680px / 2 - 18px / 2);
+                transform-origin: calc(680px / 2 + 18px / 2) calc(18px / 2);
+                animation: rotate 3009.6s infinite linear;
+            }
+
+            
+            .Mercury {
+                height: 4px;
+                width: 4px;
+                animation: rotate 2.9325s infinite linear;
+                background: radial-gradient(
+                        deepskyblue 0%,
+                        deepskyblue 55%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .Venus{
+                height: 8px;
+                width: 8px;
+                animation: rotate 12.15s infinite linear;
+                background: radial-gradient(
+                        gold 0%,
+                        gold 60%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .Earth {
+                height: 16px;
+                width: 16px;
+                animation: rotate .05s infinite linear;
+                background: radial-gradient(
+                        royalblue 0%,
+                        royalblue 60%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .moon {
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                transform-origin: 11px 11px;
+                animation: rotate 1.4765s infinite linear;
+                background: radial-gradient(
+                        lightgrey 0%,
+                        lightgrey 60%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .Mars {
+                height: 16px;
+                width: 16px;
+                animation: rotate 0.0506s infinite linear;
+                background: radial-gradient(
+                        orangered 0%,
+                        orangered 50%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .Jupiter {
+                height: 40px;
+                width: 40px;
+                animation: rotate 0.021s infinite linear;
+                background: radial-gradient(
+                        #2a2a2a 0%,
+                        #79694f 20%,
+                        #7a7467 30%,
+                        #7f6244 35%,
+                        #c3d1d1 37%,
+                        #918e85 40%,
+                        #585858 54%,
+                        #a6a6a6 58%,
+                        transparent 65%,
+                        transparent 70%
+                );
+            }
+
+            .Satur {
+                position: absolute;
+                height: 24px;
+                width: 24px;
+                border-radius: 50%;
+                animation: rotate 0.021s infinite linear;
+                background: radial-gradient(
+                        palegoldenrod 0%,
+                        tan 10%,
+                        burlywood 30%,
+                        palegoldenrod 60%,
+                        darkgray 100%
+                );
+            }
+
+            .ring {
+                position: absolute;
+                top: calc((24px - 48px) / 2);
+                left: calc((24px - 48px) / 2);
+                width: 48px;
+                height: 48px;
+                animation: rotate 0.021s infinite linear;
+                background: radial-gradient(
+                        transparent 35%,
+                        #bf9b4f 52%,
+                        #648d90 58%,
+                        transparent 70%
+                );
+            }
+
+            .Uranus {
+                height: 20px;
+                width: 20px;
+                animation: rotate 0.0356s infinite linear;
+                background: radial-gradient(
+                        lightblue 0%,
+                        lightblue 65%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            .Neptune {
+                height: 18px;
+                width: 18px;
+                animation: rotate 0.0333s infinite linear;
+                background: radial-gradient(
+                        steelblue 0%,
+                        steelblue 65%,
+                        transparent 70%,
+                        transparent 100%
+                );
+            }
+
+            
+            @keyframes rotate {
+                100% {
+                    transform: rotate(-360deg);
+                }
+    
+
+            .star {
+                height: 1px;
+                width: 1px;
+                background-color: transparent;
+                z-index: 1000;
+                animation: toTop 36s infinite linear;
+            }
+
+            @keyframes toTop {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(-100vh);
+                }
+            }
